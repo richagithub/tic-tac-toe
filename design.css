@@ -1,0 +1,67 @@
+*
+{
+	padding:0px;
+	margin:0px;
+}
+
+body
+{
+background-color:black;
+
+}
+
+canvas
+{
+	background:skyblue;
+	-webkit-transition:-webkit-transform 1s;
+	-ms-transition:-ms-transform 1s;
+	-moz-transition:-moz-transform 1s;
+	-o-transition:-o-transform 1s;
+	transition:transform 1s;
+	
+}
+canvas:hover
+{
+	width:101px;
+	height:99px;
+}
+
+#canvasDiv
+{
+	margin:150px 520px 40px;
+}
+
+#reloadButton
+{  
+    display:block;
+	background-color:green;
+	text-decoration:none;
+	color:black;
+	font:30px tahoma;
+	height:53px;
+	width:308px;
+	margin-left:520px;
+	padding-top:15px;
+	text-shadow:0 10px 10px #222;
+	text-align:center;
+}
+#reloadButton:hover
+{
+	font-size:31px;
+	color:black;
+	
+}
+
+p{
+	padding-top:30px;
+	margin-left:528px;
+	background:blue;
+	height:60px;
+	width:308px;
+	vertical-align:bottom;
+}
+
+.option
+{
+	
+}
