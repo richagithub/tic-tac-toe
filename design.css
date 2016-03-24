@@ -28,6 +28,7 @@ canvas:hover
 
 #canvasDiv
 {
+	width:370px;
 	margin:150px 520px 40px;
 }
 
