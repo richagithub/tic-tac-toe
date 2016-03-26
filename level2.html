@@ -16,14 +16,30 @@ b
 <body>
 
 <div class="options">
-<form style="color:#F3EFE0;background-color:pink;width:300px;float:left">
+<div style="color:black;background-color:pink;width:300px;float:left">
 <span>OPTIONS</span><br>
 <b >Select Level:</b><select  id="level" onchange="cL()">
 <option  >level1</option>
 <option  selected>level2</option>
 </select>
+<br>
 
-</form>
+
+<b >Select Music</b><select  id="songs" onchange="cM()">
+<option >Simple</option>
+<option selected>Hacker</option>
+</select>
+
+<audio id="player" src="Hacker.mp3" autoplay="true" controls="controls" loop="true"></audio>
+<div>
+	<button onclick="document.getElementById('player').play()">Play</button>
+	<button onclick="document.getElementById('player').pause()">Pause</button>
+	<button onclick="document.getElementById('player').volume+=0.1">Volume Up</button>
+	<button onclick="document.getElementById('player').volume-=0.1">Volume Down</button>
+</div> 
+
+
+</div>
 </div>
 
 
@@ -53,6 +69,15 @@ case 'level2': document.location.href="level2.html";break;
 default: console.log("lol");
 }
 }
+
+function cM()
+{
+var g=document.getElementById("songs");
+var sog=g.options[g.selectedIndex].innerHTML;
+document.getElementById("player").src=sog+".mp3";
+}
+
+
 </script>
 </body>
 </html>

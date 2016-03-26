@@ -1,12 +1,17 @@
 console.log("level 222");
-var winningPattern=[111000000,000111000,000000111,100100100,010010010,001001001,
-					100010001,001010100];//due to this
+var winningPattern=["111000000","000111000","000000111","100100100","010010010","001001001",
+					"100010001","001010100"];//due to this
 var r=[];
 //r=new Array(winningPattern.length);
 for(var i=winningPattern.length-1;i>=0;i--)
 {
 	r[i]=parseInt(winningPattern[i],2);
 }
+console.log(r);
+
+
+
+
 var button=[];
 for(var i=1;i<10;i++)
 	button[i]=document.getElementById('canvas'+i);
@@ -178,15 +183,23 @@ function computerTurn(data)
 	 }//evaluateLine()
 	 
 	 function hasWon(player)
-	 {var p=0;
-	 for(var i=9;i>=1;i--)
+	 {var p=0,i=0;
+	 for( i=9;i>=1;i--)
 	 {
-		 if(data[i]===player) p|=(1<<i);
+		 if(data[i]==(player)) 
+		 {
+			 //console.log(i+"=1 ");
+			 p|=(1<<(i-1));//console.log("p'="+p);
+			 }
+		 //else console.log(i+"=0 ");
 	 }
+	 //console.log("p="+p);
 	 
-	 for(var i=0;i<=7;i++)//i wrote i<=8
+	 for( i=0;i<=7;i++)//i wrote i<=8
 	 {
-		 if((r[i]&p)==r[i]) return true;
+		 if((r[i]&p)===r[i]){
+			 //console.log("winner seq:"+p+"  no."+i +" player is:"+player);
+			 return true;}
 	 }
 	 return false;
 	 }
